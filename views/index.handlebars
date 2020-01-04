@@ -1,0 +1,23 @@
+<h1>The Penalty Box!</h1>
+<h2>Where its ok to get Heated about Hockey!</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <div id="articles"></div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $.getJSON("/articles", function(data) {
+    // For each one
+    for (var i = 0; i < data.length; i++) {
+      // Display the apropos information on the page
+      $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+    }
+  });
+</script>

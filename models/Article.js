@@ -4,18 +4,22 @@ var Schema = mongoose.Schema;
 var HockeySchema = new Schema({
     title:{
         type: String,
+        trim: true,
         required: true
     },
     link: {
         type: String,
+        trim: true,
         required: false
     },
     blurb: {
         type: String,
+        trim: true,
         required: false
     },
     image: {
         type: String,
+        trim: true,
         required: false
     }
     
