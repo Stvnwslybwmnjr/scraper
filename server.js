@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-const MONGODB_URI = process.env.MONGODB_URI || "https://radiant-river-86056.herokuapp.com/";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_lhvrz2j0:la9c5b8dpq4k9seql4q7f6d5om@ds259528.mlab.com:59528/heroku_lhvrz2j0";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.engine("handlebars", exphbs({defaultLayout: "main"})); //my template engine
