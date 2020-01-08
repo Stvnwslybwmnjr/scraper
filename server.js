@@ -27,9 +27,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-mongoose.set('useCreateIndex', true);
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraper";
+// mongoose.set('useCreateIndex', true);
+mongoose.connect(MONGODB_URI);
 
 app.engine("handlebars", exphbs({defaultLayout: "main"})); //my template engine
 app.set("view engine", "handlebars");
